@@ -1,1 +1,6 @@
-events#show page
+<!-- events#show page -->
+<h1><%= @event.name %></h1>
+<%= render 'event', event: @event %>
+
+<!-- <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Delete', event_path(@event), method: :delete, data: {confirm: "Are you sure you want to delete the event '#{@event.name}'? THis cannot be undone!"} %> -->
+<%= link_to 'Back to Events', events_path %> | <%= link_to 'Edit', edit_event_path %> | <%= link_to 'Delete', event_path(@event), method: :delete, data: {confirm: 'Are you sure you want to delete this event?'} %>
